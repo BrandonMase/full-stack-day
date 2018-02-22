@@ -3,12 +3,12 @@
 
 
 * Front-end
-  * Routing - browser Router
+  * ~~Routing - browser Router~~
   * Components
-    * Login
-      * Picture
-      * Button
-      * Environment Variables - dotenv
+    * ~~Login~~
+      * ~~Picture~~
+      * ~~Button~~
+      * ~~Environment Variables - dotenv~~
     * Account
       * User info (redux)
       * axios to fetch user info
@@ -38,7 +38,7 @@
       * auth callback
       * logout
       * 
-* Packages
+* ~~Packages~~ **DONE**
   * ~~dotenv~~
   * ~~redux~~
   * ~~react-redux~~
