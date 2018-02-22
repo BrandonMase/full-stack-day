@@ -19,17 +19,17 @@
     * Action creators
     * action names
 * Back-end
-  * Database
-    * Table
-      * user table
-        * id (serial)
-        * name
-        * auth0_sub
-        * picture
-      * Queries
-        * look up user by auth0_id
-        * add a user
-        * init
+  * ~~Database~~
+    * ~~Table~~
+      * ~~user table~~
+        * ~~id (serial)~~
+        * ~~name~~
+        * ~~auth0_sub~~
+        * ~~picture~~
+      * ~~Queries~~
+        * ~~look up user by auth0_id~~
+        * ~~add a user~~
+        * ~~init~~
   * Server
     * proxy in package.json
     * API endpoints
@@ -48,13 +48,13 @@
   * ~~express~~
   * ~~express-session~~
   * ~~body-parser~~
-* Environment Variables
-  * Connection string
-  * session key
-  * auth0 domain
-  * auth0 client id
-  * auth0 client secret
+* ~~Environment Variables~~
+  * ~~Connection string~~
+  * ~~session key~~
+  * ~~auth0 domain~~
+  * ~~auth0 client id~~
+  * ~~auth0 client secret~~
 * Important Notes
-  * Put dotenv in .gitignore
+  * ~~Put dotenv in .gitignore~~
   * Restart severs whenever we change environment variables
   * ~~change package.json proxy section for auth callback~~
