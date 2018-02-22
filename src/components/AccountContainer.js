@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Account from './Account';
 import axios from 'axios';
+import { connect } from 'react-redux';
 
-export default class AccountContainer extends Component {
+class AccountContainer extends Component {
   constructor() {
     super();
     this.state = {
@@ -19,7 +20,8 @@ export default class AccountContainer extends Component {
     }).catch(error => this.setState({message:"You are unauthorized",loading:false}))
   }
   render() {
-    const { user, loading, message } = this.state;
+    const { loading, message } = this.state;
+    const { user } = this.props;
 
     return (
       <div className="account-container">
@@ -36,3 +38,11 @@ export default class AccountContainer extends Component {
           </div>);
       }
 }
+
+const mapStateToProps = state => {
+  return {
+    user:state.user,
+  }
+}
+
+export default connect(mapStateToProps)(AccountContainer)
