@@ -11,7 +11,7 @@
       * ~~Environment Variables - dotenv~~
     * Account
       * User info (redux)
-      * axios to fetch user info
+      * ~~axios to fetch user info~~
   * Redux
     * Store
     * ducks folder

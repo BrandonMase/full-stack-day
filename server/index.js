@@ -5,6 +5,7 @@ const session = require('express-session');
 const axios = require('axios');
 const authController = require('./controllers/authController')
 const userController = require('./controllers/userController')
+const checkUserStatus = require('./middlewares/checkUserStatus');
 require('dotenv').config();
 
 massive(process.env.CONNECTION_STRING).then(db => app.set('db', db)).catch(e => console.log("massive error",e));
@@ -22,8 +23,16 @@ app.use(session({
 }));
 
 app.get('/auth/callback', authController.connect);
-app.get('/api/user-data', userController.getUser);
-app.post('/api/logout', userController.destroy);
+// app.get('/api/user-data', checkUserStatus, userController.getUser);
+app.get('/api/user-data', (req, res) => {
+  res.json({
+    user: {
+      name: 'T$',
+      email:'etc'
+    }
+  })
+})
+app.post('/api/logout/', userController.logout);
 
 
 
